@@ -4606,7 +4606,7 @@ CONFIG_OPENSSL_ENGINE=y
 CONFIG_PACKAGE_libopenssl-conf=y
 CONFIG_PACKAGE_libopenssl-devcrypto=y
 # CONFIG_PACKAGE_libopenssl-gost_engine is not set
-# CONFIG_PACKAGE_libopenssl-legacy is not set
+CONFIG_PACKAGE_libopenssl-legacy=y
 # CONFIG_PACKAGE_libwolfssl is not set
 
 #
@@ -5454,7 +5454,7 @@ CONFIG_PACKAGE_luci-app-passwall=y
 # Configuration
 #
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Haproxy is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Hysteria is not set
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Hysteria=y
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_NaiveProxy is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Client is not set
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server is not set
@@ -7199,7 +7199,7 @@ CONFIG_PACKAGE_ethtool=y
 # CONFIG_PACKAGE_httping-nossl is not set
 # CONFIG_PACKAGE_https-dns-proxy is not set
 # CONFIG_PACKAGE_httptunnel is not set
-# CONFIG_PACKAGE_hysteria is not set
+CONFIG_PACKAGE_hysteria=y
 # CONFIG_PACKAGE_i2pd is not set
 # CONFIG_PACKAGE_ibrdtn-tools is not set
 # CONFIG_PACKAGE_ibrdtnd is not set
