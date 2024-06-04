@@ -24,6 +24,28 @@ echo "DISTRIB_SOURCECODE='immortalwrt'" >>package/base-files/files/etc/openwrt_r
 #
 wget -P feeds/packages/multimedia/minidlna/patches/ https://raw.githubusercontent.com/stock169/openwrt-ipq40xx-generic-p2w_r619ac-128m/main/002-support-ape-mka-format.patch
 rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/packages/net/ipt2socks
+rm -rf feeds/packages/net/pdnsd-alt
+rm -rf feeds/packages/net/simple-obfs
+rm -rf feeds/packages/net/tcping
+rm -rf feeds/packages/net/trojan-plus
+rm -rf feeds/packages/net/v2ray-geodata
+rm -rf feeds/packages/net/xray-plugin
+rm -rf feeds/packages/net/chinadns-ng
+rm -rf feeds/packages/net/microsocks
+rm -rf feeds/packages/net/shadowsocks-rust
+rm -rf feeds/packages/net/sing-box
+rm -rf feeds/packages/net/trojan
+rm -rf feeds/packages/net/tuic-client
+rm -rf feeds/packages/net/v2ray-plugin
+rm -rf feeds/packages/net/dns2socks
+rm -rf feeds/packages/net/hysteria
+rm -rf feeds/packages/net/naiveproxy
+rm -rf feeds/packages/net/shadowsocksr-libev
+rm -rf feeds/packages/net/ssocks
+rm -rf feeds/packages/net/trojan-go
+rm -rf feeds/packages/net/v2ray-core
+rm -rf feeds/packages/net/xray-core
 # Add luci-app-amlogic
 rm -rf package/luci-app-amlogic
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
