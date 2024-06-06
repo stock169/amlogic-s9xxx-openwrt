@@ -66,10 +66,10 @@ git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
 #
 # ------------------------------- Other ends -------------------------------
-sed -i 's/GO_PKG_BUILD_PKG:=$(GO_PKG)\/app/GO_PKG_BUILD_PKG:=$(GO_PKG)\/app\/v2/g' feeds/packages/net/hysteria/Makefile
-sed -i 's/app\/cmd.appVersion/app\/v2\/cmd.appVersion/g' feeds/packages/net/hysteria/Makefile
-sed -i 's/app\/cmd.appType/app\/v2\/cmd.appType/g' feeds/packages/net/hysteria/Makefile
-sed -i 's/app\/cmd.appPlatform/app\/v2\/cmd.appPlatform/g' feeds/packages/net/hysteria/Makefile
-sed -i 's/app\/cmd.appArch/app\/v2\/cmd.appArch/g' feeds/packages/net/hysteria/Makefile
+#sed -i 's/GO_PKG_BUILD_PKG:=$(GO_PKG)\/app/GO_PKG_BUILD_PKG:=$(GO_PKG)\/app\/v2/g' feeds/packages/net/hysteria/Makefile
+#sed -i 's/app\/cmd.appVersion/app\/v2\/cmd.appVersion/g' feeds/packages/net/hysteria/Makefile
+#sed -i 's/app\/cmd.appType/app\/v2\/cmd.appType/g' feeds/packages/net/hysteria/Makefile
+#sed -i 's/app\/cmd.appPlatform/app\/v2\/cmd.appPlatform/g' feeds/packages/net/hysteria/Makefile
+#sed -i 's/app\/cmd.appArch/app\/v2\/cmd.appArch/g' feeds/packages/net/hysteria/Makefile
 #./scripts/feeds update -a
 #./scripts/feeds install -a
