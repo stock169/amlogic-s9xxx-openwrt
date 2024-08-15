@@ -667,7 +667,7 @@ make_image() {
 
     parted -s ${build_image_file} mklabel ${partition_table_type} 2>/dev/null
     parted -s ${build_image_file} mkpart primary ${bootfs_type} $((skip_mb))MiB $((skip_mb + boot_mb - 1))MiB 2>/dev/null
-    parted -s ${build_image_file} mkpart primary ext4 $((skip_mb + boot_mb))MiB 100% 2>/dev/null
+    parted -s ${build_image_file} mkpart primary btrfs $((skip_mb + boot_mb))MiB 100% 2>/dev/null
 
     # Mount the OpenWrt image file
     loop_new="$(losetup -P -f --show "${build_image_file}")"
@@ -690,7 +690,7 @@ make_image() {
     fi
 
     # Format rootfs partition
-    mkfs.ext4 -f -U ${ROOTFS_UUID} -L "ROOTFS" -m single ${loop_new}p2 >/dev/null 2>&1
+    mkfs.btrfs -f -U ${ROOTFS_UUID} -L "ROOTFS" -m single ${loop_new}p2 >/dev/null 2>&1
 
     # Write the specific bootloader for [ Amlogic ] boxes
     [[ "${PLATFORM}" == "amlogic" ]] && {
@@ -760,10 +760,10 @@ extract_openwrt() {
     fi
 
     # Mount rootfs
-    mount_try ext4 ${loop_new}p2 ${tag_rootfs}
+    mount_try btrfs ${loop_new}p2 ${tag_rootfs}
 
     # Create snapshot directory
-    #btrfs subvolume create ${tag_rootfs}/etc >/dev/null 2>&1
+    btrfs subvolume create ${tag_rootfs}/etc >/dev/null 2>&1
 
     # Unzip the OpenWrt rootfs file
     tar -mxzf ${openwrt_path}/${openwrt_default_file} -C ${tag_rootfs}
@@ -845,7 +845,7 @@ refactor_bootfs() {
     }
 
     # Set uEnv.txt & extlinux.conf mount parameters
-    uenv_rootdev="UUID=${ROOTFS_UUID} rootflags=data=writeback rw rootfstype=ext4"
+    uenv_rootdev="UUID=${ROOTFS_UUID} rootflags=compress=zstd:6 rootfstype=btrfs"
     # Set armbianEnv.txt mount parameters
     armbianenv_rootdev="UUID=${ROOTFS_UUID}"
     armbianenv_rootflags="compress=zstd:6"
@@ -1091,8 +1091,8 @@ EOF
     cd ${current_path}
 
     # Create snapshot
-    #mkdir -p ${tag_rootfs}/.snapshots
-    #btrfs subvolume snapshot -r ${tag_rootfs}/etc ${tag_rootfs}/.snapshots/etc-000 >/dev/null 2>&1
+    mkdir -p ${tag_rootfs}/.snapshots
+    btrfs subvolume snapshot -r ${tag_rootfs}/etc ${tag_rootfs}/.snapshots/etc-000 >/dev/null 2>&1
 
     sync && sleep 3
 }
