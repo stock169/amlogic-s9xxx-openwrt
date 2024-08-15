@@ -667,7 +667,7 @@ make_image() {
 
     parted -s ${build_image_file} mklabel ${partition_table_type} 2>/dev/null
     parted -s ${build_image_file} mkpart primary ${bootfs_type} $((skip_mb))MiB $((skip_mb + boot_mb - 1))MiB 2>/dev/null
-    parted -s ${build_image_file} mkpart primary btrfs $((skip_mb + boot_mb))MiB 100% 2>/dev/null
+    parted -s ${build_image_file} mkpart primary ext4 $((skip_mb + boot_mb))MiB 100% 2>/dev/null
 
     # Mount the OpenWrt image file
     loop_new="$(losetup -P -f --show "${build_image_file}")"
@@ -760,10 +760,10 @@ extract_openwrt() {
     fi
 
     # Mount rootfs
-    mount_try btrfs ${loop_new}p2 ${tag_rootfs}
+    mount_try ext4 ${loop_new}p2 ${tag_rootfs}
 
     # Create snapshot directory
-    btrfs subvolume create ${tag_rootfs}/etc >/dev/null 2>&1
+    ext4 subvolume create ${tag_rootfs}/etc >/dev/null 2>&1
 
     # Unzip the OpenWrt rootfs file
     tar -mxzf ${openwrt_path}/${openwrt_default_file} -C ${tag_rootfs}
