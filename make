@@ -763,7 +763,7 @@ extract_openwrt() {
     mount_try ext4 ${loop_new}p2 ${tag_rootfs}
 
     # Create snapshot directory
-    ext4 subvolume create ${tag_rootfs}/etc >/dev/null 2>&1
+    btrfs subvolume create ${tag_rootfs}/etc >/dev/null 2>&1
 
     # Unzip the OpenWrt rootfs file
     tar -mxzf ${openwrt_path}/${openwrt_default_file} -C ${tag_rootfs}
