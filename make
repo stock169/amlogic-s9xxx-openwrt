@@ -690,7 +690,7 @@ make_image() {
     fi
 
     # Format rootfs partition
-    mkfs.btrfs -f -U ${ROOTFS_UUID} -L "ROOTFS" -m single ${loop_new}p2 >/dev/null 2>&1
+    mkfs.ext4 -f -U ${ROOTFS_UUID} -L "ROOTFS" -m single ${loop_new}p2 >/dev/null 2>&1
 
     # Write the specific bootloader for [ Amlogic ] boxes
     [[ "${PLATFORM}" == "amlogic" ]] && {
@@ -845,7 +845,7 @@ refactor_bootfs() {
     }
 
     # Set uEnv.txt & extlinux.conf mount parameters
-    uenv_rootdev="UUID=${ROOTFS_UUID} rootflags=compress=zstd:6 rootfstype=btrfs"
+    uenv_rootdev="UUID=${ROOTFS_UUID} rootflags=data=writeback rw rootfstype=ext4"
     # Set armbianEnv.txt mount parameters
     armbianenv_rootdev="UUID=${ROOTFS_UUID}"
     armbianenv_rootflags="compress=zstd:6"
