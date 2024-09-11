@@ -18,7 +18,6 @@ on:
           - openwrt-main
           - lede-master
           - immortalwrt-master
-          - immortalwrt-openwrt-21.02
       openwrt_board:
         description: "Select device board"
         required: false
@@ -285,7 +284,7 @@ jobs:
           # Set up compilation source code
           if [[ "${{ inputs.source_branch }}" == *"openwrt"* ]]; then
               REPO_URL="https://github.com/openwrt/openwrt"
-              REPO_BRANCH="main"
+              REPO_BRANCH="openwrt-23.05"
               TAGS_NAME="official"
           elif [[ "${{ inputs.source_branch }}" == *"lede"* ]]; then
               REPO_URL="https://github.com/coolsnowwolf/lede"
@@ -293,7 +292,7 @@ jobs:
               TAGS_NAME="lede"
           elif [[ "${{ inputs.source_branch }}" == *"immortalwrt"* ]]; then
               REPO_URL="https://github.com/immortalwrt/immortalwrt"
-              REPO_BRANCH="openwrt-21.02"
+              REPO_BRANCH="master"
               TAGS_NAME="immortalwrt"
           else
               echo "Unknown source code repository."
