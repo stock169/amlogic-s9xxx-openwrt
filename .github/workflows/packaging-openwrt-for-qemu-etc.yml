@@ -51,10 +51,10 @@ on:
           - vplus
           - zcube1-max
           - diy
-      customize_s905l3:
-        description: "Set customize s905l3 devices"
+      customize_qemu-aarch64:
+        description: "Set customize qemu-aarch64 devices"
         required: false
-        default: "HG680-LC:meson-gxl-s905l2-x7-5g.dtb"
+        default: "qemu-aarch64"
       openwrt_kernel:
         description: "Select kernel version"
         required: false
