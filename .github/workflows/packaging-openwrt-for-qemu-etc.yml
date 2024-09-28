@@ -51,10 +51,10 @@ on:
           - vplus
           - zcube1-max
           - diy
-      customize_rk3399:
-        description: "Set customize rk3399 devices"
+      customize_s905l3:
+        description: "Set customize s905l3 devices"
         required: false
-        default: "tvi3315a:rk3399-tvi3315a.dtb/sw799:rk3399-bozz-sw799.dtb"
+        default: "HG680-LC:meson-gxl-s905l2-x7-5g.dtb"
       openwrt_kernel:
         description: "Select kernel version"
         required: false
@@ -156,8 +156,8 @@ jobs:
         working-directory: /builder
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
         run: |
-          armvirt_tarfile_repo="ophub/amlogic-s9xxx-openwrt"
-          releases_tag_keywords="OpenWrt_lede_"
+          armvirt_tarfile_repo="stock169/amlogic-s9xxx-openwrt"
+          releases_tag_keywords="OpenWrt_immortalwrt_"
 
           armvirt_tarfile_path="openwrt/output"
           [[ -d "${armvirt_tarfile_path}" ]] || mkdir -p ${armvirt_tarfile_path}
