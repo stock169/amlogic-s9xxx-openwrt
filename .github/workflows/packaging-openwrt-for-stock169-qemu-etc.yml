@@ -4,7 +4,7 @@
 # Copyright (C) 2021 https://github.com/ophub/flippy-openwrt-actions
 #=====================================================================================
 
-name: Packaging QEMU and others
+name: Packaging QEMU and others-stock169
 
 on:
   repository_dispatch:
