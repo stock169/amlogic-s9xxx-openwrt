@@ -239,9 +239,9 @@ jobs:
     if: ${{ github.event.repository.owner.id }} == ${{ github.event.sender.id }}
 
     steps:
-    - name: Free Disk Space
-      uses: endersonmenezes/free-disk-space@main
-      with:
+     - name: Free Disk Space
+       uses: endersonmenezes/free-disk-space@main
+       with:
           remove_android: true
           remove_dotnet: true
           remove_haskell: true
