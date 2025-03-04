@@ -157,7 +157,7 @@ jobs:
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
         run: |
           armvirt_tarfile_repo="stock169/amlogic-s9xxx-openwrt"
-          releases_tag_keywords="OpenWrt_lede_"
+          releases_tag_keywords="OpenWrt_immortalwrt_"
 
           armvirt_tarfile_path="openwrt/output"
           [[ -d "${armvirt_tarfile_path}" ]] || mkdir -p ${armvirt_tarfile_path}
