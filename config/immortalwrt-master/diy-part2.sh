@@ -27,6 +27,7 @@ wget -P feeds/packages/multimedia/minidlna/patches/ https://raw.githubuserconten
 #wget -P feeds/packages/sound/mpd/ https://raw.githubusercontent.com/stock169/amlogic-s9xxx-openwrt/main/Makefile
 sed -i 's/USER="mpd"/USER="root"/g' feeds/packages/sound/mpd/files/mpd.init
 sed -i 's/GROUP="mpd"/GROUP="root"/g' feeds/packages/sound/mpd/files/mpd.init
+sed -i 's/mkdir \$(PKG_BUILD_DIR)\/\$(ARCH)/mkdir -p \$(PKG_BUILD_DIR)\/\$(ARCH)/g' /feeds/packages/utils/coremark/Makefile
 rm -rf feeds/luci/applications/luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall/.git
@@ -77,4 +78,3 @@ git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 #sed -i 's/app\/cmd.appArch/app\/v2\/cmd.appArch/g' feeds/packages/net/hysteria/Makefile
 #./scripts/feeds update -a
 #./scripts/feeds install -a
-sed -i 's/mkdir \$(PKG_BUILD_DIR)\/\$(ARCH)/mkdir -p \$(PKG_BUILD_DIR)\/\$(ARCH)/g' ../feeds/packages/utils/coremark/Makefile
