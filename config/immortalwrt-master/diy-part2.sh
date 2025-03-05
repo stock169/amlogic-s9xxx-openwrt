@@ -77,3 +77,4 @@ git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 #sed -i 's/app\/cmd.appArch/app\/v2\/cmd.appArch/g' feeds/packages/net/hysteria/Makefile
 #./scripts/feeds update -a
 #./scripts/feeds install -a
+sed -i 's/mkdir \$(PKG_BUILD_DIR)\/\$(ARCH)/mkdir -p \$(PKG_BUILD_DIR)\/\$(ARCH)/g' ../feeds/packages/utils/coremark/Makefile
