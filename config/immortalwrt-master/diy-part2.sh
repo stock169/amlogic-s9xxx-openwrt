@@ -82,5 +82,6 @@ git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 sudo apt install snapd
 sudo snap install go --classic
 go version
+go list
 go mod tidy
-go list -m -version
+go list 
