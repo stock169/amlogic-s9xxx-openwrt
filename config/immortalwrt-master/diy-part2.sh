@@ -58,6 +58,7 @@ rm -rf feeds/packages/net/v2ray-core
 rm -rf feeds/packages/net/xray-core
 rm -rf feeds/packages/net/brook
 rm -rf feeds/packages/net/dns2tcp
+rm -rf feeds/packages/net/geoview
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net/tmp
 rm -rf feeds/packages/net/tmp/.git
 rm -rf feeds/packages/net/tmp/.github
