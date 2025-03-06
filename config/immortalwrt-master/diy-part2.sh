@@ -79,7 +79,7 @@ git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 #sed -i 's/app\/cmd.appArch/app\/v2\/cmd.appArch/g' feeds/packages/net/hysteria/Makefile
 #./scripts/feeds update -a
 #./scripts/feeds install -a
-sudo snap install snap-store
+sudo apt install snapd
 sudo snap install go --classic
 # go env -w GO111MODULE=on
 go mod tidy
