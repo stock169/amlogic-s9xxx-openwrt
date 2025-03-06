@@ -84,6 +84,7 @@ go version
 go list -m all
 sudo snap install go --classic
 go version
+go env -w GO111MODULE=on
 go list -m all
 go mod tidy
 go version
