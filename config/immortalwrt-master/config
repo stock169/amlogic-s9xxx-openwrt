@@ -4798,7 +4798,7 @@ CONFIG_PACKAGE_jsoncpp=y
 CONFIG_PACKAGE_libarchive=y
 # CONFIG_PACKAGE_libarchive-noopenssl is not set
 # CONFIG_PACKAGE_libasm is not set
-# CONFIG_PACKAGE_libassuan is not set
+CONFIG_PACKAGE_libassuan=y is not set
 # CONFIG_PACKAGE_libatasmart is not set
 # CONFIG_PACKAGE_libaudit is not set
 # CONFIG_PACKAGE_libauparse is not set
