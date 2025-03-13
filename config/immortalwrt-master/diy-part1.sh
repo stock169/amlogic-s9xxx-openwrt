@@ -18,5 +18,6 @@
 #echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
 #echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
 #git checkout ea6f3e49d6509f3bddb43364cf7225b4935fee82
-git add package/kernel/linux/modules/netdevices.mk
-git revert 40f1db9cb11d98ef0b5061b8e210e6351935df8a
+#git add package/kernel/linux/modules/netdevices.mk
+#git revert 40f1db9cb11d98ef0b5061b8e210e6351935df8a
+git reset 8a7863767056ca0dec69a6b383b6e0c0d5fc3af7
