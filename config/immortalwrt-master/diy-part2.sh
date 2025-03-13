@@ -29,6 +29,8 @@ rm -f feeds/packages/lang/golang/golang/Makefile
 wget -P feeds/packages/lang/golang/golang/ https://raw.githubusercontent.com/sbwml/packages_lang_golang/refs/heads/24.x/golang/Makefile
 rm -f feeds/packages/utils/podman/Makefile
 wget -P feeds/packages/utils/podman/ https://raw.githubusercontent.com/stock169/openwrt-ipq40xx-generic-p2w_r619ac-128m/refs/heads/main/Makefile
+rm -f target/linux/armsr/modules.mk
+wget -P target/linux/armsr/ https://raw.githubusercontent.com/openwrt/openwrt/refs/heads/main/target/linux/armsr/modules.mk
 sed -i 's/USER="mpd"/USER="root"/g' feeds/packages/sound/mpd/files/mpd.init
 sed -i 's/GROUP="mpd"/GROUP="root"/g' feeds/packages/sound/mpd/files/mpd.init
 sed -i 's/mkdir \$(PKG_BUILD_DIR)\/\$(ARCH)/mkdir -p \$(PKG_BUILD_DIR)\/\$(ARCH)/g' feeds/packages/utils/coremark/Makefile
