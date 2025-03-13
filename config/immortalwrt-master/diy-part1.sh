@@ -19,4 +19,4 @@
 #echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
 #git checkout ea6f3e49d6509f3bddb43364cf7225b4935fee82
 #git revert 40f1db9cb11d98ef0b5061b8e210e6351935df8a
-#git reset --hard e78047d56f1511aeb1e7a184ef5ed1e9a24b9ce1
+git reset --hard e78047d56f1511aeb1e7a184ef5ed1e9a24b9ce1
