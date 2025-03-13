@@ -106,11 +106,11 @@ adjust_settings() {
     rm -f ${tmp_path}/usr/sbin/openwrt-*-*
     rm -f ${tmp_path}/etc/init.d/amlogic
     # Remove docker Service
-    rm -f ${tmp_path}/usr/lib/lua/luci/controller/docker*
-    rm -rf ${tmp_path}/usr/lib/lua/luci/model/cbi/docker*
-    rm -f ${tmp_path}/usr/lib/lua/luci/model/docker*
-    rm -f ${tmp_path}/usr/bin/docker*
-    rm -f ${tmp_path}/etc/init.d/docker*
+    #rm -f ${tmp_path}/usr/lib/lua/luci/controller/docker*
+    #rm -rf ${tmp_path}/usr/lib/lua/luci/model/cbi/docker*
+    #rm -f ${tmp_path}/usr/lib/lua/luci/model/docker*
+    #rm -f ${tmp_path}/usr/bin/docker*
+    #rm -f ${tmp_path}/etc/init.d/docker*
 
     # Turn off hw_flow by default
     [[ -f "${tmp_path}/etc/config/turboacc" ]] && {
