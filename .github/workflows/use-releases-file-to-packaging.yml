@@ -168,6 +168,7 @@ on:
           - tvi3315a
           - vplus
           - wxy-oec
+          - efused-wxy-oec
           - xiaobao
           - yskj
           - zcube1-max
