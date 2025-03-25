@@ -184,6 +184,8 @@ on:
           - 5.10.y
           - 5.15.y
           - 6.1.y
+          - 6.1.75
+          - 6.1.99
           - 6.6.y
           - 6.12.y
           - 5.4.y_5.10.y
@@ -203,6 +205,7 @@ on:
         type: choice
         options:
           - ophub/kernel
+          - stock169/kernel
       kernel_usage:
         description: "Set the tags of the stable kernel."
         required: false
