@@ -309,7 +309,7 @@ jobs:
           armvirt_tarfile_path="openwrt/output"
           [[ -d "${armvirt_tarfile_path}" ]] || mkdir -p ${armvirt_tarfile_path}
           ln -sf /builder/openwrt ${GITHUB_WORKSPACE}/openwrt
-          ln -sf /builder/openwrt /home/runner/work/_actions/ophub/amlogic-s9xxx-openwrt/main/openwrt
+          ln -sf /builder/openwrt /home/runner/work/_actions/stock169/amlogic-s9xxx-openwrt/main/openwrt
 
           latest_version=$(curl -s \
                 -H "Accept: application/vnd.github+json" \
@@ -340,7 +340,7 @@ jobs:
 
       - name: Packaging OpenWrt
         if: ${{ steps.down.outputs.status }} == 'success' && !cancelled()
-        uses: ophub/amlogic-s9xxx-openwrt@main
+        uses: stock169/amlogic-s9xxx-openwrt@main
         with:
           openwrt_path: openwrt/output/*rootfs.tar.gz
           openwrt_board: ${{ inputs.openwrt_board }}
