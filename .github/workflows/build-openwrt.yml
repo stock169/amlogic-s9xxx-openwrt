@@ -18,6 +18,7 @@ on:
           - openwrt-main
           - lede-master
           - immortalwrt-master
+          - immortalwrt-openwrt-24.10
       openwrt_board:
         description: "Select device board"
         required: false
