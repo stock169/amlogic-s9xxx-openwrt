@@ -209,6 +209,7 @@ on:
         options:
           - ophub/kernel
           - stock169/kernel
+          - dd-ray/kernel
       kernel_usage:
         description: "Set the tags of the stable kernel."
         required: false
