@@ -68,7 +68,7 @@ rm -rf feeds/packages/net/geoview
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net/tmp
 rm -rf feeds/packages/net/tmp/simple-obfs
 #sed -i 's/PKG_MIRROR_HASH:=ea8f2b9825bbb87d5d860524e29bade265141687338db2dbf7ecd32690cf02fc/PKG_MIRROR_HASH:=f12f35d7d026d1f5599a3ede9ff53c8474405aa9984adb0ae968114952aeb0bf/' feeds/packages/net/tmp/simple-obfs/Makefile
-cat feeds/packages/net/tmp/simple-obfs/Makefile
+#cat feeds/packages/net/tmp/simple-obfs/Makefile
 rm -rf feeds/packages/net/tmp/.git
 rm -rf feeds/packages/net/tmp/.github
 rm -rf feeds/packages/net/tmp/gn
