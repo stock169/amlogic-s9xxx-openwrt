@@ -83,6 +83,9 @@ rm -rf feeds/packages/net/tmp/.git
 rm -rf feeds/packages/net/tmp/.github
 rm -rf feeds/packages/net/tmp/gn
 mv feeds/packages/net/tmp/* feeds/packages/net
+# Add podman-tui
+git clone https://github.com/ntbowen/podman-tui-for-openwrt package/podman-tui
+# CONFIG_PACKAGE_podman-tui=y
 # Add luci-app-amlogic
 rm -rf package/luci-app-amlogic
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
