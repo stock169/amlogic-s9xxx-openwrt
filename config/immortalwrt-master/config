@@ -8479,6 +8479,7 @@ CONFIG_PACKAGE_openssl-util=y
 # CONFIG_PACKAGE_pkgen is not set
 # CONFIG_PACKAGE_pnpids is not set
 CONFIG_PACKAGE_podman=y
+CONFIG_PACKAGE_podman-tui=y
 
 #
 # Configuration
