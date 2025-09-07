@@ -35,6 +35,8 @@ rm -f feeds/packages/utils/dockerd/Makefile
 wget -P feeds/packages/utils/dockerd/ https://raw.githubusercontent.com/sbwml/packages_utils_dockerd/refs/heads/main/Makefile
 rm -f feeds/packages/utils/containerd/Makefile
 wget -P feeds/packages/utils/containerd/ https://raw.githubusercontent.com/sbwml/packages_utils_containerd/refs/heads/main/Makefile
+rm -f feeds/packages/utils/runc/Makefile
+wget -P feeds/packages/utils/runc/ https://raw.githubusercontent.com/sbwml/packages_utils_runc/refs/heads/main/Makefile
 #rm -f target/linux/armsr/modules.mk
 #wget -P target/linux/armsr/ https://raw.githubusercontent.com/openwrt/openwrt/refs/heads/main/target/linux/armsr/modules.mk
 sed -i 's/USER="mpd"/USER="root"/g' feeds/packages/sound/mpd/files/mpd.init
