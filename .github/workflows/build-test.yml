@@ -4,7 +4,7 @@
 # Description: Build OpenWrt
 #============================================================================================
 
-name: Build OpenWrt
+name: Build test
 
 on:
   repository_dispatch:
