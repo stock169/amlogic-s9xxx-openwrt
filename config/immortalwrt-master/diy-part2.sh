@@ -27,8 +27,8 @@ wget -P feeds/packages/multimedia/minidlna/patches/ https://raw.githubuserconten
 #wget -P feeds/packages/sound/mpd/ https://raw.githubusercontent.com/stock169/amlogic-s9xxx-openwrt/main/Makefile
 rm -f feeds/packages/lang/golang/golang/Makefile
 wget -P feeds/packages/lang/golang/golang/ https://raw.githubusercontent.com/sbwml/packages_lang_golang/refs/heads/25.x/golang/Makefile
-#rm -f feeds/packages/utils/podman/Makefile
-#wget -P feeds/packages/utils/podman/ https://raw.githubusercontent.com/stock169/openwrt-ipq40xx-generic-p2w_r619ac-128m/refs/heads/main/Makefile
+rm -f feeds/packages/utils/podman/Makefile
+wget -P feeds/packages/utils/podman/ https://raw.githubusercontent.com/stock169/openwrt-ipq40xx-generic-p2w_r619ac-128m/refs/heads/main/Makefile
 rm -f feeds/packages/utils/docker/Makefile
 wget -P feeds/packages/utils/docker/ https://raw.githubusercontent.com/sbwml/packages_utils_docker/refs/heads/main/Makefile
 rm -f feeds/packages/utils/dockerd/Makefile
@@ -37,8 +37,8 @@ rm -f feeds/packages/utils/containerd/Makefile
 wget -P feeds/packages/utils/containerd/ https://raw.githubusercontent.com/sbwml/packages_utils_containerd/refs/heads/main/Makefile
 rm -f feeds/packages/utils/runc/Makefile
 wget -P feeds/packages/utils/runc/ https://raw.githubusercontent.com/sbwml/packages_utils_runc/refs/heads/main/Makefile
-#rm -f feeds/packages/libs/gpgme/Makefile
-#wget -P feeds/packages/libs/gpgme/ https://raw.githubusercontent.com/stock169/openwrt-ipq40xx-generic-p2w_r619ac-128m/refs/heads/main/gpgme/Makefile
+rm -f feeds/packages/libs/gpgme/Makefile
+wget -P feeds/packages/libs/gpgme/ https://raw.githubusercontent.com/stock169/openwrt-ipq40xx-generic-p2w_r619ac-128m/refs/heads/main/gpgme/Makefile
 #rm -f target/linux/armsr/modules.mk
 #wget -P target/linux/armsr/ https://raw.githubusercontent.com/openwrt/openwrt/refs/heads/main/target/linux/armsr/modules.mk
 sed -i 's/USER="mpd"/USER="root"/g' feeds/packages/sound/mpd/files/mpd.init
