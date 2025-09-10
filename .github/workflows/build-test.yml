@@ -206,10 +206,11 @@ on:
       kernel_repo:
         description: "Set the kernel repository"
         required: false
-        default: "ophub/kernel"
+        default: "stock169/kernels"
         type: choice
         options:
           - ophub/kernel
+          - stock169/kernels
           - stock169/kernel
           - dd-ray/kernel
       kernel_usage:
