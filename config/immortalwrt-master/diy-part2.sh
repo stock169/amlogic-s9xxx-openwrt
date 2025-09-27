@@ -72,6 +72,7 @@ rm -rf feeds/packages/net/naiveproxy
 rm -rf feeds/packages/net/shadowsocksr-libev
 rm -rf feeds/packages/net/ssocks
 rm -rf feeds/packages/net/trojan-go
+rm -rf feeds/packages/net/shadow-tls
 rm -rf feeds/packages/net/v2ray-core
 rm -rf feeds/packages/net/xray-core
 rm -rf feeds/packages/net/brook
