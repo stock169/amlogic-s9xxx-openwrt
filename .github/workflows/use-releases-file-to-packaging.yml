@@ -12,7 +12,7 @@ on:
       source_branch:
         description: "Select the source branch"
         required: false
-        default: "official"
+        default: "immortalwrt"
         type: choice
         options:
           - official
@@ -174,6 +174,7 @@ on:
           - zcube1-max
           - zk-r39a
           - zysj
+          - wxy-oec_s905l3a-cm311
       openwrt_kernel:
         description: "Select kernel version"
         required: false
