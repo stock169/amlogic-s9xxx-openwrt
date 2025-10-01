@@ -8,7 +8,7 @@ mount -t btrfs -o compress=zstd:9 /dev/mmcblk0p8  /mnt/mmcblk0p8
 cd /mnt/mmcblk0p8
 rm -rf bin lib sbin usr www 
 cd /mnt/mmcblk0p8/etc
-rm -rf !(config|fstab)
+rm -rf !(config|fstab|xiaoya)
 cd /
 cp -rf bin /mnt/mmcblk0p8/
 cp -rf lib /mnt/mmcblk0p8/
