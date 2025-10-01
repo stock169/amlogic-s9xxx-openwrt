@@ -1,4 +1,5 @@
 cd /mnt/mmcblk0p7
+shopt -s extglob
 rm -rf !(extlinux)
 cd /
 cp -rn /boot/* /mnt/mmcblk0p7/
@@ -14,4 +15,4 @@ cp -rf lib /mnt/mmcblk0p8/
 cp -rf sbin /mnt/mmcblk0p8/
 cp -rf usr /mnt/mmcblk0p8/
 cp -rf www /mnt/mmcblk0p8/
-cp -rn etc /mnt/mmcblk0p8/
+cp -rn etc/* /mnt/mmcblk0p8/etc/
