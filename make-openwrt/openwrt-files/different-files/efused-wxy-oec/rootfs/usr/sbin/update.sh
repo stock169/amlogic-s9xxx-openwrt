@@ -16,3 +16,5 @@ cp -rf sbin /mnt/mmcblk0p8/
 cp -rf usr /mnt/mmcblk0p8/
 cp -rf www /mnt/mmcblk0p8/
 cp -rn etc/* /mnt/mmcblk0p8/etc/
+umount /mnt/mmcblk0p7
+umount /mnt/mmcblk0p8
