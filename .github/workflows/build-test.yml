@@ -206,7 +206,7 @@ on:
       kernel_repo:
         description: "Set the kernel repository"
         required: false
-        default: "stock169/kernels"
+        default: "stock169/kernel"
         type: choice
         options:
           - ophub/kernel
