@@ -47,7 +47,7 @@ sed -i 's/USER="mpd"/USER="root"/g' feeds/packages/sound/mpd/files/mpd.init
 sed -i 's/GROUP="mpd"/GROUP="root"/g' feeds/packages/sound/mpd/files/mpd.init
 sed -i 's/mkdir \$(PKG_BUILD_DIR)\/\$(ARCH)/mkdir -p \$(PKG_BUILD_DIR)\/\$(ARCH)/g' feeds/packages/utils/coremark/Makefile
 rm -rf feeds/luci/applications/luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall.git feeds/luci/applications/luci-app-passwall
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall.git feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall/.git
 rm -rf feeds/luci/applications/luci-app-passwall/.github
 mv feeds/luci/applications/luci-app-passwall/luci-app-passwall/* feeds/luci/applications/luci-app-passwall
@@ -78,7 +78,7 @@ rm -rf feeds/packages/net/xray-core
 rm -rf feeds/packages/net/brook
 rm -rf feeds/packages/net/dns2tcp
 rm -rf feeds/packages/net/geoview
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net/tmp
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git feeds/packages/net/tmp
 #sed -i 's/PKG_MIRROR_HASH:=ea8f2b9825bbb87d5d860524e29bade265141687338db2dbf7ecd32690cf02fc/PKG_MIRROR_HASH:=f12f35d7d026d1f5599a3ede9ff53c8474405aa9984adb0ae968114952aeb0bf/' feeds/packages/net/tmp/simple-obfs/Makefile
 #cat feeds/packages/net/tmp/simple-obfs/Makefile
 rm -rf feeds/packages/net/tmp/.git
