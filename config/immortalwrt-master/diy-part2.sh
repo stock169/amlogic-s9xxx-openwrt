@@ -27,8 +27,8 @@ wget -P feeds/packages/multimedia/minidlna/patches/ https://raw.githubuserconten
 #wget -P feeds/packages/sound/mpd/ https://raw.githubusercontent.com/stock169/amlogic-s9xxx-openwrt/main/Makefile
 #rm -f feeds/packages/lang/rust/Makefile
 #wget -P feeds/packages/lang/rust/ https://raw.githubusercontent.com/stock169/openwrt-ipq40xx-generic-p2w_r619ac-128m/refs/heads/main/rust/Makefile
-#rm -f feeds/packages/lang/golang/golang/Makefile
-#wget -P feeds/packages/lang/golang/golang/ https://raw.githubusercontent.com/sbwml/packages_lang_golang/refs/heads/25.x/golang/Makefile
+rm -f feeds/packages/lang/golang/golang/Makefile
+wget -P feeds/packages/lang/golang/golang/ https://raw.githubusercontent.com/sbwml/packages_lang_golang/refs/heads/25.x/golang/Makefile
 rm -f feeds/packages/utils/podman/Makefile
 wget -P feeds/packages/utils/podman/ https://raw.githubusercontent.com/stock169/openwrt-ipq40xx-generic-p2w_r619ac-128m/refs/heads/main/Makefile
 rm -f feeds/packages/utils/docker/Makefile
