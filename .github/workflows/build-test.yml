@@ -253,7 +253,7 @@ jobs:
   build:
     #runs-on: ubuntu-22.04
     runs-on: ubuntu-latest
-    if: ${{ github.event.repository.owner.id }} == ${{ github.event.sender.id }}
+    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
       - name: install bc
@@ -316,7 +316,7 @@ jobs:
       - name: Clone source code [ ${{ inputs.source_branch }} ]
         id: codes
         working-directory: /builder
-        if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
+        if:  steps.init.outputs.status == 'success' && !cancelled()
         run: |
           # Set up compilation source code
           if [[ "${{ inputs.source_branch }}" == *"openwrt"* ]]; then
@@ -389,7 +389,7 @@ jobs:
 
       - name: Clear server space
         id: clean
-        if: ${{ steps.compile.outputs.status }} == 'success' && !cancelled()
+        if: steps.compile.outputs.status == 'success' && !cancelled()
         run: |
           # Clean up server space
           cd openwrt/
@@ -408,7 +408,7 @@ jobs:
 
       - name: Upload OpenWrt to Release
         uses: ncipollo/release-action@main
-        if: ${{ steps.clean.outputs.status }} == 'success' && !cancelled()
+        if: steps.clean.outputs.status == 'success' && !cancelled()
         with:
           tag: ${{ steps.codes.outputs.build_tag }}
           artifacts: openwrt/output/*
@@ -418,7 +418,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Packaging OpenWrt
-        if: ${{ steps.clean.outputs.status }} == 'success' && !cancelled()
+        if: steps.clean.outputs.status == 'success' && !cancelled()
         uses: stock169/amlogic-s9xxx-openwrt@main
         with:
           openwrt_path: openwrt/output/*rootfs.tar.gz
@@ -431,7 +431,7 @@ jobs:
 
       - name: Upload the packaged OpenWrt
         uses: ncipollo/release-action@main
-        if: ${{ env.PACKAGED_STATUS }} == 'success' && !cancelled()
+        if:  env.PACKAGED_STATUS  == 'success' && !cancelled()
         with:
           tag: ${{ steps.codes.outputs.build_tag }}
           artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
